@@ -1,0 +1,403 @@
+@charset "shift_jis";
+
+/*
+---------------------------------------------------------------------------
+■制作元：テンプレートパーティー
+■URL：http://template-party.com/
+---------------------------------------------------------------------------*/
+
+body {
+	color: #999999;	/*全体の文字色*/
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font: 75%/2 "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+	background: #E5E2DD url(../images/p-pt_0255-l_pt_02550.jpg) center top;	/*全体の背景色、背景画像の読み込み＆中央・上を基準に並べる*/
+}
+/*トップページ専用の設定*/
+body#top {
+	background: #FFFFFF url(../images/bg.jpg) center top;	/*左から、背景色、背景画像の読み込み＆リピートしない＆中央・上を基準に並べる*/
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form{
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	list-style-type: none;
+}
+img {
+	border: none;
+}
+input,textarea,select {
+	font-size: 1em;
+}
+form {
+	margin: 0px;
+}
+table {
+	border-collapse:collapse;
+	font-size: 100%;
+	border-spacing: 0;
+}
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: #999999;
+}
+a:hover {
+	color: #dd8e38;			/*カーソルオーバー時の文字色*/
+	text-decoration: none;	/*カーソルオーバー時に下線を消す設定。残しておきたいならこの１行削除。*/
+}
+
+/*コンテナー（HPを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	text-align: left;
+	width: 960px;	/*コンテナー幅*/
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*h1見出しの設定
+---------------------------------------------------------------------------*/
+h1 {
+	font-size: 11px;		/*文字サイズ*/
+	text-align: right;		/*文字を右寄せ*/
+	font-weight: normal;	/*hタグはデフォルトで太字なので通常に。風呂時がいいならこの１行削除。*/
+	color: #666;			/*文字色*/
+	line-height: 30px;		/*行間*/
+}
+h1 a {
+	text-decoration: none;
+	color: #666;			/*文字色*/
+}
+
+/*メインコンテンツ（右側ブロック）
+---------------------------------------------------------------------------*/
+#main {
+	float: right;	/*右側に回り込み*/
+	width: 700px;	/*メインコンテンツ幅*/
+	padding-right: 10px;
+}
+/*トップページ専用の設定*/
+#top #main {
+	padding-top: 330px;	/*トップページだけ、メインコンテンツ上部に330pxの余白を作る。*/
+	background: url(../images/mainimg.jpg) no-repeat right top;	/*余白部分の背景写真*/
+}
+/*h2タグ設定*/
+#main h2 {
+	font-size: 100%;
+	clear: both;
+	width: 688px;
+	color: #FFFFFF;			/*文字色*/
+	padding: 5px 0px 5px 10px;	/*左から、上、右、下、左への余白*/
+	background: #dd8e38;	/*背景色*/
+	border: 1px dashed #FFF;	/*枠線の幅、線種、色*/
+}
+/*段落タグの余白設定*/
+#main p {
+	padding: 0.5em 10px 1em;	/*左から、上、左右、下への余白*/
+	color: #666;				/*文字色*/
+}
+/*段落タグ内で左右の幅一杯に使う設定。recipe2.htmlの写真で使用。*/
+#main p.img {
+	padding: 0.5em 0px 1em;	/*左から、上、左右、下への余白*/
+}
+
+/*メインコンテンツ内box（白い土台ボックス）設定。
+---------------------------------------------------------------------------*/
+/*ボックス１個あたりの設定*/
+#main .box {
+	background: #FFF;	/*背景色*/
+	padding: 10px;		/*ボックス内の余白。これを変更する場合、下のwidthの値も変える。*/
+	border: 1px solid #dd8e38;	/*枠線の幅、線種、色。幅を変更する場合、下のwidthの値も変える。*/
+	margin-bottom: 10px;	/*ボックス同士の隙間*/
+	overflow: hidden;	/*ボックスから中身が飛び出して見えないようにする簡易clearfix*/
+	width: 678px;
+}
+/*ボックス内のh2タグ設定*/
+#main .box h2 {
+	width: 666px;
+}
+/*ボックス内の段落タグ設定*/
+#main .box p {
+	color: #999;
+}
+
+/*サブコンテンツ（左側ブロック）
+---------------------------------------------------------------------------*/
+#sub {
+	float: left;	/*左側に回り込み*/
+	width: 220px;	/*サブコンテンツ幅*/
+	padding-left: 10px;
+	padding-top: 30px;
+}
+/*ロゴ画像設定*/
+#sub #logo {
+	background: #FFF;	/*背景色*/
+	border: 1px solid #dd8e38;	/*枠線の幅、線種、色*/
+	color: #dd8e38;		/*文字色*/
+	text-align: center;	/*文字をセンタリング*/
+	margin-bottom: 10px;	/*ロゴ下の余白*/
+	font-size: 14px;	/*文字サイズ*/
+	font-weight: bold;	/*文字を太字に*/
+	padding: 5px;		/*色の付いた部分と白いボックスとの間の余白*/
+}
+#sub #logo a {
+	color: #dd8e38;	/*文字色*/
+	text-decoration: none;
+}
+/*ロゴ画像の色のついた部分*/
+#sub #logo span {
+	display: block;
+	border: 1px dashed #dd8e38;	/*枠線の幅、線種、色*/
+	padding: 50px 0px;		/*左から上下、左右への余白。左右はセンタリングしてるので0でいい。*/
+	background: #f9e7d3;	/*背景色*/
+}
+/*段落タグの余白設定*/
+#sub p {
+	padding: 0.5em 0px 1em;	/*左から、上、左右、下への余白*/
+}
+
+/*メニュー（親メニュー）
+---------------------------------------------------------------------------*/
+ul.menu li {
+	margin-bottom: 10px;	/*メニュー同士の余白*/
+	border: 1px solid #dd8e38;	/*枠線の幅、線種、色*/
+	background: #FFF;		/*背景色*/
+}
+ul.menu li a {
+	display: block;
+	width: 188px;
+	padding: 7px 0px 7px 30px;	/*左から、上、右、下、左への余白*/
+	text-decoration: none;		/*デフォルトで入るリンクの下線を消す設定*/
+	color: #dd8e38;				/*文字色*/
+	background: #FFF url(../images/arrow1.gif) no-repeat 8px 19px;	/*背景色、背景画像(矢印)の読み込み＆左から8px、上から19pxの位置に配置*/
+	line-height: 40px;			/*行間*/
+}
+ul.menu li a:hover {
+	color: #FFFFFF;	/*マウスオン時の文字色*/
+	background: #dd8e38 url(../images/arrow1_on.gif) no-repeat 8px 19px;	/*マウスオン時の矢印画像の読み込み*/
+}
+/*メニュー（子メニュー）
+---------------------------------------------------------------------------*/
+ul.menu ul li {
+	margin-bottom: 0;
+	border-top: 1px dashed #e17599;		/*上側の線の幅、線種、色*/
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+}
+ul.menu ul li a {
+	background: #FFFFFF;	/*背景色*/
+	line-height: normal;	/*行間を標準に*/
+}
+ul.menu ul li a:hover {
+	background: #f9e7d3;	/*マウスオン時の背景色*/
+	color: #DD8E38;			/*マウスオン時の文字色*/
+}
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+#main .new {
+	overflow: auto;	/*iframe風に見せる設定。全部表示させたいならこの１行と、heightの行を削除。*/
+	height: 150px;	/*ボックスの高さ*/
+	width: 668px;
+	padding-left: 10px;
+}
+#main .new dl {
+	clear: left;
+	width: 648px;
+	border-bottom: 1px solid #cccccc;	/*日付ごとに入る下線の幅、線種、色*/
+	overflow: hidden;
+}
+#main .new dt {
+	font-weight: bold;	/*日付を太字に*/
+	float: left;
+	width: 100px;
+}
+#main .new dd {
+	float: left;
+	width: 548px;
+}
+#main .new dd img {
+	vertical-align: middle;
+}
+*html #main .new dd img {
+	margin-top:0.5em;
+	vertical-align: baseline;
+}
+
+/*フッター
+---------------------------------------------------------------------------*/
+#footer {
+	clear: both;
+	width: 100%;
+	text-align: center;	/*文字をセンタリング*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 10px;	/*文字サイズ*/
+	color: #666;		/*文字色*/
+	letter-spacing: 0.1em;	/*文字間隔。少しだけ広くとる設定。*/
+}
+/*フッター内にリンク設定した場合用*/
+#footer a {
+	text-decoration: none;
+	color: #666;	/*文字色*/
+}
+
+/*テーブル１
+---------------------------------------------------------------------------*/
+/*テーブル全体の設定*/
+.ta1 {
+	border: 3px solid #DD8E38;	/*テーブルの外側の枠線の幅、線種、色*/
+	width: 700px;		/*テーブル幅*/
+	background: #FFF;
+}
+/*ボックス内で使った場合のテーブル幅*/
+.box .ta1 {
+	width: 678px;
+}
+.ta1 td, .ta1 th{
+	border: 1px dashed #DD8E38;	/*テーブル内の枠線の幅、線種、色*/
+	line-height: 2;
+}
+/*テーブル内のtd幅(右側)*/
+.ta1 td{
+	width: 455px;
+	padding: 10px;
+	vertical-align: top;
+}
+/*ボックス内で使った場合のtd幅*/
+.box .ta1 td{
+	width: 477px;
+}
+/*テーブル内のth(左側)*/
+.ta1 th{
+	width: 180px;
+	padding: 10px;
+	text-align: center;
+	background: #ebebeb;	/*背景色*/
+}
+/*テーブル１行目に入った見出し部分*/
+.ta1 th.tamidashi{
+	width: auto;
+	text-align: left;
+	background: #f9e7d3;	/*背景色*/
+	color: #dd8e38;			/*文字色*/
+}
+
+/*レシピ一覧ページ(recipe.html)
+---------------------------------------------------------------------------*/
+/*ボックス１個あたりの設定*/
+#main .box1 {
+	background: #FFF;	/*背景色*/
+	float: left;		/*左に流し込みさせていく*/
+	height: 250px;		/*ボックスの高さ*/
+	width: 198px;		/*ボックスの幅*/
+	padding: 10px;		/*ボックス内の余白*/
+	font-size: 12px;	/*文字サイズ*/
+	overflow: hidden;	/*飛び出た文字を非表示にする設定*/
+	border: 1px solid #DD8E38;	/*ボックスの枠線の幅、線種、色*/
+	display: inline;	/*IE6対策*/
+	margin-left: 4px;	/*ボックス同士の横側の余白*/
+	margin-bottom: 5px;	/*ボックス同士の縦側の余白*/
+}
+/*box1内のh3見出しタグの設定*/
+#main .box1 h3 {
+	font-size: 100%;
+	color: #dd8e38;	/*文字色*/
+	border-bottom: 1px dashed #dd8e38;	/*下線の幅、線種、色*/
+	margin-bottom: 0.5em;
+}
+#main .box1 h3 a {
+	color: #dd8e38;	/*リンクテキストになった場合の文字色*/
+}
+#main .box1 p {
+	padding: 0px;
+}
+
+/*レシピ詳細ページ(recipe2.html)
+---------------------------------------------------------------------------*/
+#main .recipe-list p {
+	padding: 0px;
+}
+/*材料が入る左側のブロック*/
+#main .recipe-list {
+	float: left;	/*ブロックを左側に回り込み*/
+	width: 250px;	/*ブロック幅*/
+}
+/*説明が入る右側のブロック*/
+#main .recipe-step {
+	float: right;	/*ブロックを右側に回り込み*/
+	width: 420px;	/*ブロック幅*/
+}
+/*recipe-stepブロック内のh3見出しタグの設定*/
+#main .recipe-step h3 {
+	font-size: 100%;
+	padding: 5px;	/*余白*/
+	color: #dd8e38;	/*文字色*/
+	background: #f9e7d3;	/*背景色*/
+	border-top: 1px dashed #dd8e38;		/*上側の線の幅、線種、色*/
+	border-bottom: 1px dashed #dd8e38;	/*下側の線の幅、線種、色*/
+	margin-bottom: 0.5em;
+}
+
+/*レシピ詳細ページの材料テーブル
+---------------------------------------------------------------------------*/
+table.recipe {
+	width: 250px;	/*テーブル幅*/
+	font-size: 11px;	/*文字サイズ*/
+}
+table.recipe,table.recipe td, table.recipe th{
+	border: 1px solid #bfbfbf;	/*テーブルの枠線の幅、線種、色*/
+	line-height: 1.8;
+}
+/*テーブル内の右側*/
+table.recipe td{
+	padding: 5px;
+	vertical-align: top;
+}
+/*テーブル内の左側*/
+table.recipe th{
+	width: 100px;
+	padding: 5px;
+	text-align: center;
+	background: #ebebeb;	/*背景色*/
+}
+/*テーブル１行目に入った見出し部分*/
+table.recipe th.tamidashi{
+	width: auto;
+	text-align: left;
+	background: #dd8e38;	/*背景色*/
+	color: #FFF;	/*文字色*/
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {
+	background-color: #dbd6cd;
+}
+.mb1em {
+	margin-bottom: 1em;
+}
+.clear {
+	clear: both;
+}
+ul.disc {
+	padding: 0em 25px 1em;
+	list-style: disc;
+}
+ol {
+	padding: 0em 0px 0em 25px;
+}
+ol li {
+	padding-bottom: 0.5em;
+}
+.color1 {
+	color: #dd8e38;
+}
+.pr {
+	font-size: 10px;
+}
